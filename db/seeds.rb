@@ -9,11 +9,11 @@ puts "Cleaning database..."
 Restaurant.destroy_all
 
 puts "Creating restaurants..."
-dishoom = { name: "Dishoom", address: "7 Boundary St, London E2 7JE", phone_number: 0611156273 }
-pizza_east = { name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", phone_number: 0611156273, }
-chez_mai = { name: "Chez mai", address: "Bali", phone_number: 0611156273, }
-arnoult_pizza = { name: "Arnould pizza", address: "Corée du Sud", phone_number: 0611156273, }
-paul_prot = { name: "Paul prot", address: "Annecy", phone_number: 0611156273, }
+dishoom = { name: "Dishoom", address: "7 Boundary St, London E2 7JE", category: "french",  }
+pizza_east = { name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", category: "italian" }
+chez_mai = { name: "Chez mai", address: "Bali", category: "chinese" }
+arnoult_pizza = { name: "Arnould pizza", address: "Corée du Sud", category: "italian" }
+paul_prot = { name: "Paul prot", address: "Annecy", category: "belgian" }
 
 [dishoom, pizza_east, chez_mai, arnoult_pizza, paul_prot].each do |attributes|
   restaurant = Restaurant.create!(attributes)
